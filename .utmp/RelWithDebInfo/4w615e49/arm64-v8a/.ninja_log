@@ -1,0 +1,11 @@
+# ninja log v5
+36	268	7506521977739649	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	2d1afaf2b2cbf086
+268	426	7506521978886165	C:/Users/ralph/Documents/GitHub/AR_Battleship/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w615e49/obj/arm64-v8a/libswappywrapper.so	654cc020c3877ac6
+23	725	7506521982228808	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	28272260f3e91927
+6	755	7506521982568308	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	db6e7435891e099d
+17	755	7506521982520039	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	7656d473b2ef6c06
+32	805	7506521982961244	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a447ff2a26ab792c
+1	848	7506521983410792	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	74952050f7c9e30a
+27	949	7506521984497358	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	354d5fce397003e3
+9	1012	7506521984973668	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	cb9a4ad33716de94
+1012	1174	7506521986230904	C:/Users/ralph/Documents/GitHub/AR_Battleship/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w615e49/obj/arm64-v8a/libgame.so	a4a23acaa9639205
