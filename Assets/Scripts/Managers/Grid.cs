@@ -16,7 +16,7 @@ public class GridCreator : MonoBehaviour
 
     private void OnValidate()
     {
-        // Ensure the grid is only created if we're in Edit Mode
+        //Only created if in Edit Mode
         if (!Application.isPlaying && regenerateGrid)
         {
             CreateOrFindGridParent(); // Create or find the parent object
@@ -31,18 +31,18 @@ public class GridCreator : MonoBehaviour
 
     }
 
-    // Create or find the parent object named "Grid"
+    // Create or find the parent object named Grid
     void CreateOrFindGridParent()
     {
         gridParent = transform.Find("Grid");
 
-        // If "Grid" doesn't exist, create a new one
+        // If Grid doesn't exist, create a new one
         if (gridParent == null)
         {
             GameObject gridObject = new GameObject("Grid");
             gridParent = gridObject.transform;
 
-            // Parent the "Grid" to the GameObject holding this script for organization
+            // Parent the Grid to the GameObject holding this script for organization
             gridParent.parent = this.transform;
         }
     }
@@ -74,7 +74,7 @@ public class GridCreator : MonoBehaviour
                 {
                     cube.transform.position = position;
 
-                    char rowLetter = (char)(65 + x); // 65 = 'A'
+                    char rowLetter = (char)(65 + x); // i.e 65 = 'A'
                     int columnNumber = z + 1;
                     cube.name = rowLetter.ToString() + columnNumber.ToString();
 
@@ -87,7 +87,7 @@ public class GridCreator : MonoBehaviour
 
     void ClearGrid()
     {
-        // Destroy all children under the "Grid" parent object
+        // Destroy all children under the parent object
         if (gridParent != null)
         {
             for (int i = gridParent.childCount - 1; i >= 0; i--)
