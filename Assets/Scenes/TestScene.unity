@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331fecc0ae4580e4480c39034975c1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 753511326}
+  player: {fileID: 603636174}
 --- !u!1 &381310992
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 603636172}
   - component: {fileID: 603636171}
+  - component: {fileID: 603636173}
+  - component: {fileID: 603636175}
+  - component: {fileID: 603636174}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -300,7 +303,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1732907806}
   m_OriginBaseGameObject: {fileID: 603636170}
   m_CameraFloorOffsetObject: {fileID: 1777121685}
-  m_RequestedTrackingOriginMode: 2
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
 --- !u!4 &603636172
 Transform:
@@ -318,6 +321,46 @@ Transform:
   - {fileID: 1777121686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603636173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603636170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 1321652022023116070, guid: 923cfe3108faa1848ae1c500db786c4d, type: 3}
+  m_DetectionMode: 1
+--- !u!114 &603636174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603636170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc425e643aae1544d89a07d4b3404567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 2027687970434216090, guid: 4eed05f868fe77041ad648970249d473, type: 3}
+--- !u!114 &603636175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603636170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 2027687970434216090, guid: 4eed05f868fe77041ad648970249d473, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,50 +454,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &753511325
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 753511327}
-  - component: {fileID: 753511326}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &753511326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753511325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc425e643aae1544d89a07d4b3404567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &753511327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753511325}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1732907800
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,4 +755,3 @@ SceneRoots:
   - {fileID: 1746394363}
   - {fileID: 603636172}
   - {fileID: 381310995}
-  - {fileID: 753511327}
