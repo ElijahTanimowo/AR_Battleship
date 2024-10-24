@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc425e643aae1544d89a07d4b3404567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 2027687970434216090, guid: 4eed05f868fe77041ad648970249d473, type: 3}
+  objectToSpawn: {fileID: 7936445335687642964, guid: 7300de6a9d93567419872360125d686d, type: 3}
 --- !u!114 &603636175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 2027687970434216090, guid: 4eed05f868fe77041ad648970249d473, type: 3}
+  m_RaycastPrefab: {fileID: 7936445335687642964, guid: 7300de6a9d93567419872360125d686d, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
