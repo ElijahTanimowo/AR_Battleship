@@ -23,6 +23,11 @@ public class GridCreator : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+
+    }
+
     // Create or find the parent object named "Grid"
     void CreateOrFindGridParent()
     {
