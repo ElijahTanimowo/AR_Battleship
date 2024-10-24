@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
             if (plane.alignment == PlaneAlignment.HorizontalUp)
             {
                 // Spawn the object at the hit point if nothing is spawned yet
-                spawnedObject = Instantiate(objectToSpawn, hit.pose.position, hit.pose.rotation);
+                spawnedObject = Instantiate(objectToSpawn, hit.pose.position, objectToSpawn.transform.rotation);
             }
         }
     }
