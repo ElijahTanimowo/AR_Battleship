@@ -1,5 +1,8 @@
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [ExecuteInEditMode]
 public class GridCreator : MonoBehaviour
@@ -59,8 +62,13 @@ public class GridCreator : MonoBehaviour
                 // Instantiate
                 Vector3 position = new Vector3(x * spacing, 0, z * spacing);
 
+#if UNITY_EDITOR
                 //Instantiate for edit mode
                 GameObject cube = (GameObject)PrefabUtility.InstantiatePrefab(cubePrefab, gridParent);
+#else
+                GameObject cube = Instantiate(cubePrefab, position, Quaternion.identity);
+
+#endif
 
                 if (cube != null)
                 {
