@@ -193,6 +193,7 @@ MonoBehaviour:
   target: {fileID: 563185919}
   speed: 500
   rotationSpeed: 1
+  smokeTrail: {fileID: 747937558}
 --- !u!54 &15356468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -422,6 +423,11 @@ Transform:
 --- !u!4 &747937556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3244961816490849416, guid: e447e11a12540fd4e8b8c7ac37338862, type: 3}
+  m_PrefabInstance: {fileID: 4179386597687283243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &747937558 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8916806490556778823, guid: e447e11a12540fd4e8b8c7ac37338862, type: 3}
   m_PrefabInstance: {fileID: 4179386597687283243}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1581907089 stripped
