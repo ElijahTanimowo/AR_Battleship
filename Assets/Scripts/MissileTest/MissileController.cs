@@ -14,6 +14,12 @@ public class MissileController : MonoBehaviour
     [Header("Positioning")]
     private Vector3 startPosition;
 
+    [Header("Smoke")]
+    public ParticleSystem smokeTrail;
+
+    [Header("Explosion")]
+    public ParticleSystem explosionPrefab;
+
     void Start()
     {
         startPosition = transform.position;
@@ -25,6 +31,7 @@ public class MissileController : MonoBehaviour
         if (target != null)
         {
             MoveToTarget(target.position);
+            smokeTrail.Play();
         }
     }
 
@@ -46,12 +53,18 @@ public class MissileController : MonoBehaviour
     {
         if (target != null && other.transform == target)
         {
+            // set explosion location
+            Instantiate(explosionPrefab, target.position, Quaternion.identity);
+
             // reset missile position and rotation
             transform.position = startPosition;
             transform.rotation = Quaternion.identity;
 
             // reset target
             target = null;
+
+            // stop playing smoke trail
+            smokeTrail.Stop();
         }
     }
 
