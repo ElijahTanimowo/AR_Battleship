@@ -8,18 +8,24 @@ public class GridPoint : MonoBehaviour
     [Header("Info Grid Point")]
     public bool hasShip;
     public bool isHit;
+    [SerializeField] GameObject counterPart;
+    GridPoint opp;
 
     [Header("Material of Grid Point")]
     [SerializeField] Material hit;
     [SerializeField] Material notHit;
 
-    MeshRenderer meshRender;
+    public MeshRenderer meshRender;
 
     // Start is called before the first frame update
     void Start()
     {
         meshRender = GetComponent<MeshRenderer>();
 
+        if(counterPart != null)
+        {
+            opp = counterPart.GetComponent<GridPoint>();
+        }
     }
 
     // Update is called once per frame
@@ -39,13 +45,20 @@ public class GridPoint : MonoBehaviour
 
     public void OnHitGridPoint()
     {
-        if (hasShip) 
+        if (opp != null)
         {
-            meshRender.material = hit;
-        }
-        else
-        {
-            meshRender.material = notHit;
+            if (opp.hasShip)
+            {
+                this.meshRender.material = hit;
+                opp.meshRender.material = hit;
+                this.isHit = true;
+                opp.isHit = true;
+            }
+            else
+            {
+                this.meshRender.material = notHit;
+                opp.meshRender.material = notHit;
+            }
         }
     }
 }
