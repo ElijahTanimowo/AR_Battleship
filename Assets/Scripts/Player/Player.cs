@@ -6,7 +6,10 @@ using UnityEngine.XR.ARSubsystems;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Info")]
+    public bool canAttack = false;
 
+    [Space]
     public GameObject objectToSpawn;
     private ARRaycastManager raycastManager;
     private GameObject spawnedObject;
