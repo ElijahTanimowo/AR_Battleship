@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5408559329832942933}
   - component: {fileID: 1364070220606169848}
   - component: {fileID: 4672348184983680305}
+  - component: {fileID: 2472914665317931821}
+  - component: {fileID: 4044414227278451751}
   m_Layer: 0
   m_Name: TestCube
   m_TagString: Untagged
@@ -107,3 +109,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &2472914665317931821
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027687970434216090}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.2661701
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.1140289, z: 0}
+--- !u!114 &4044414227278451751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027687970434216090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0104f6c056d5510468bd6eaad7384e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasShip: 0
+  isHit: 0
