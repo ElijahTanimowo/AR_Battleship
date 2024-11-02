@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     private void SpawnGrid()
     {
         if (spawnedObject != null)
-            return;  // Exit if we already have a box spawned
+            return;  // Exit if already have a grid spawned
 
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
