@@ -5,8 +5,13 @@ using UnityEngine;
 public class GridPoint : MonoBehaviour
 {
 
+    [Header("Info Grid Point")]
     public bool hasShip;
     public bool isHit;
+
+    [Header("Material of Grid Point")]
+    [SerializeField] Material hit;
+    [SerializeField] Material notHit;
 
     MeshRenderer meshRender;
 
@@ -36,11 +41,11 @@ public class GridPoint : MonoBehaviour
     {
         if (hasShip) 
         {
-
+            meshRender.material = hit;
         }
         else
         {
-
+            meshRender.material = notHit;
         }
     }
 }

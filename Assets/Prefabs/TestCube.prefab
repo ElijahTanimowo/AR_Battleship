@@ -146,3 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasShip: 0
   isHit: 0
+  hit: {fileID: 2100000, guid: 695e57203dfa0894299f9bd586c6265e, type: 2}
+  notHit: {fileID: 2100000, guid: c8067ceab83b90345a79ab6b3e428654, type: 2}
