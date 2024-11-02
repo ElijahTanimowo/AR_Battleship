@@ -194,6 +194,7 @@ MonoBehaviour:
   speed: 500
   rotationSpeed: 1
   smokeTrail: {fileID: 747937558}
+  explosionPrefab: {fileID: 3219039365368255600, guid: b8f6597faff2e024ea653b0ebc1ca701, type: 3}
 --- !u!54 &15356468
 Rigidbody:
   m_ObjectHideFlags: 0
