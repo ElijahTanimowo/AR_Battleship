@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
                     if (selectedGridPoint.tag == "EnemyGridPoint")
                     {
                         Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+                        CheckForShip(selectedGridPoint);
                     }
                 }
             }
