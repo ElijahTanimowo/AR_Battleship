@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    [Header("Game Info")]
+    [SerializeField] GameObject grid;
+    public GridManager gridManager;
+    public PlayerTurn currentTurn;
 
     private void Awake()
     {
@@ -17,16 +23,47 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        currentTurn = PlayerTurn.Player1;
+
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+        FindGrid();
+    }
+
+    /// <summary>
+    /// Finds the grid in world
+    /// </summary>
+    private void FindGrid()
+    {
+        //if exist end function
+        if(grid != null && gridManager != null) return;
+
+        //Find Object with tag Grid
+        grid = GameObject.FindWithTag("Grid");
+
+        //Check grid exist
+        if (grid != null && grid.GetComponent<GridManager>()) 
+        {
+            //Assign the Manager
+            gridManager = grid.GetComponent<GridManager>();
+        }
         
+    }
+
+    public void EndTurn()
+    {
+        if (currentTurn == PlayerTurn.Player1)
+        {
+            currentTurn = PlayerTurn.Player2;
+        }
+        else
+        {
+            currentTurn = PlayerTurn.Player1;
+        }
     }
 }

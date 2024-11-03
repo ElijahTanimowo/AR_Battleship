@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class GridManager : MonoBehaviour
 {
-    public static PlayerManager instance;
-    public Player player;
+    public static GridManager instance;
 
+    [Header("Grid Info")]
+    public GameObject player1TargetGrid;
+    public GameObject player2TargetGrid;
 
     private void Awake()
     {
@@ -20,11 +22,8 @@ public class PlayerManager : MonoBehaviour
             instance = this;
         }
 
-        
+
     }
 
-    public void CompleteMove()
-    {
-        GameManager.instance.EndTurn();
-    }
+
 }
