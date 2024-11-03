@@ -47,18 +47,11 @@ public class Player : MonoBehaviour
                     {
                         if (GameManager.instance.currentTurn == PlayerTurn.Player1 && selectedGridPoint.layer == LayerMask.NameToLayer("Player1Grid"))
                         {
-                           
-
-                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                            CheckForShip(selectedGridPoint);
-                            PlayerManager.instance.CompleteMove();
+                            CheckGridPoint(selectedGridPoint);
                         }
                         else if (GameManager.instance.currentTurn == PlayerTurn.Player2 && selectedGridPoint.layer == LayerMask.NameToLayer("Player2Grid"))
                         {
-                            
-                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                            CheckForShip(selectedGridPoint);
-                            PlayerManager.instance.CompleteMove();
+                            CheckGridPoint(selectedGridPoint);
                         }
                     }
                 }
@@ -80,20 +73,23 @@ public class Player : MonoBehaviour
                     {
                         if (GameManager.instance.currentTurn == PlayerTurn.Player1 && selectedGridPoint.layer == LayerMask.NameToLayer("Player1Grid"))
                         {
-                            PlayerManager.instance.CompleteMove();
-                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                            CheckForShip(selectedGridPoint);
+                            CheckGridPoint(selectedGridPoint);
                         }
                         else if (GameManager.instance.currentTurn == PlayerTurn.Player2 && selectedGridPoint.layer == LayerMask.NameToLayer("Player2Grid"))
                         {
-                            PlayerManager.instance.CompleteMove();
-                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                            CheckForShip(selectedGridPoint);
+                            CheckGridPoint(selectedGridPoint);
                         }
                     }
                 }
             }
         }
+    }
+
+    private void CheckGridPoint(GameObject selectedGridPoint)
+    {
+        
+        Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+        CheckForShip(selectedGridPoint);
     }
 
     private void SpawnGrid()
@@ -124,8 +120,12 @@ public class Player : MonoBehaviour
         GridPoint point = gridPoint.GetComponent<GridPoint>();
         if (point != null) 
         {
-            point.OnHitGridPoint();
-            ShootMissile(gridPoint);
+            if (!point.isHit)
+            {
+                point.OnHitGridPoint();
+                ShootMissile(gridPoint);
+                PlayerManager.instance.CompleteMove();
+            }
            
         }
     }
