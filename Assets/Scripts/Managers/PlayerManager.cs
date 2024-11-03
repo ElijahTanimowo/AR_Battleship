@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
-    public Player player;
+    Player player;
 
 
     private void Awake()
@@ -21,6 +21,14 @@ public class PlayerManager : MonoBehaviour
         }
 
         
+    }
+
+    private void Start()
+    {
+  
+     
+
+
     }
 
     public void CompleteMove()

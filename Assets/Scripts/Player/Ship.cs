@@ -21,6 +21,7 @@ public class Ship : MonoBehaviour
         if(shipDurability <= 0)
         {
             Destroy(gameObject);
+            Debug.Log("Sunk a " + this.name);
         }
     }
 

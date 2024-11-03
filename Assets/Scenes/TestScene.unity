@@ -258,7 +258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc425e643aae1544d89a07d4b3404567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttack: 0
   objectToSpawn: {fileID: 7936445335687642964, guid: 7300de6a9d93567419872360125d686d, type: 3}
 --- !u!114 &603636175
 MonoBehaviour:
@@ -641,7 +640,11 @@ PrefabInstance:
     - target: {fileID: 7833772542429352702, guid: 9d74a1a0198f01b4fb2c923be177b741, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 603636174}
+      objectReference: {fileID: 603636170}
+    - target: {fileID: 7833772542429352702, guid: 9d74a1a0198f01b4fb2c923be177b741, type: 3}
+      propertyPath: playerXR
+      value: 
+      objectReference: {fileID: 603636170}
     - target: {fileID: 8336821152726447308, guid: 9d74a1a0198f01b4fb2c923be177b741, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

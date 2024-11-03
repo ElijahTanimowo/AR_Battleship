@@ -6,9 +6,6 @@ using UnityEngine.XR.ARSubsystems;
 
 public class Player : MonoBehaviour
 {
-    [Header("Missile Info")]
-    public MissileController missileP1;
-
     [Space]
     public GameObject objectToSpawn;
     private ARRaycastManager raycastManager;
