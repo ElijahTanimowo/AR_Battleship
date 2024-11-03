@@ -3661,9 +3661,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7458414049693642132}
+  - component: {fileID: 1943034978444377187}
   m_Layer: 0
   m_Name: GridManager
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3685,6 +3686,22 @@ Transform:
   - {fileID: 2700483860630821205}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1943034978444377187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936445335687642964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7c500e7c8942e458938a33de3f2f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1TargetGrid: {fileID: 745516530299372135}
+  player1Turn: 0
+  player2TargetGrid: {fileID: 4246936968014810214}
+  player2Turn: 0
 --- !u!1 &8069018847281450424
 GameObject:
   m_ObjectHideFlags: 0
