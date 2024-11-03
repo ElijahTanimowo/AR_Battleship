@@ -45,8 +45,18 @@ public class Player : MonoBehaviour
                     //Check it is Enemy Grid Point
                     if (selectedGridPoint.tag == "EnemyGridPoint")
                     {
-                        Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                        CheckForShip(selectedGridPoint);
+                        if (GameManager.instance.currentTurn == PlayerTurn.Player1 && selectedGridPoint.layer == LayerMask.NameToLayer("Player1Grid"))
+                        {
+                            PlayerManager.instance.CompleteMove();
+                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+                            CheckForShip(selectedGridPoint);
+                        }
+                        else if (GameManager.instance.currentTurn == PlayerTurn.Player2 && selectedGridPoint.layer == LayerMask.NameToLayer("Player2Grid"))
+                        {
+                            PlayerManager.instance.CompleteMove();
+                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+                            CheckForShip(selectedGridPoint);
+                        }
                     }
                 }
             }
@@ -65,8 +75,18 @@ public class Player : MonoBehaviour
                     //Check it is Enemy Grid Point
                     if (selectedGridPoint.tag == "EnemyGridPoint")
                     {
-                        Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
-                        CheckForShip(selectedGridPoint);
+                        if (GameManager.instance.currentTurn == PlayerTurn.Player1 && selectedGridPoint.layer == LayerMask.NameToLayer("Player1Grid"))
+                        {
+                            PlayerManager.instance.CompleteMove();
+                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+                            CheckForShip(selectedGridPoint);
+                        }
+                        else if (GameManager.instance.currentTurn == PlayerTurn.Player2 && selectedGridPoint.layer == LayerMask.NameToLayer("Player2Grid"))
+                        {
+                            PlayerManager.instance.CompleteMove();
+                            Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+                            CheckForShip(selectedGridPoint);
+                        }
                     }
                 }
             }

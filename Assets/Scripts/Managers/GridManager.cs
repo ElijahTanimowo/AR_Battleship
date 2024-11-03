@@ -7,9 +7,8 @@ public class GridManager : MonoBehaviour
     public static GridManager instance;
 
     [Header("Grid Info")]
-    [SerializeField] GameObject player1TargetGrid;
-    [SerializeField] GameObject player2TargetGrid;
-
+    public GameObject player1TargetGrid;
+    public GameObject player2TargetGrid;
 
     private void Awake()
     {
@@ -22,17 +21,9 @@ public class GridManager : MonoBehaviour
         {
             instance = this;
         }
+
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

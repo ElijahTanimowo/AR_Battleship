@@ -9,9 +9,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Info")]
     [SerializeField] GameObject grid;
-    [SerializeField] GridManager gridManager;
-    public bool player1Turn;
-    public bool player2Turn;
+    public GridManager gridManager;
+    public PlayerTurn currentTurn;
 
     private void Awake()
     {
@@ -25,6 +24,8 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
+        currentTurn = PlayerTurn.Player1;
+
     }
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         FindGrid();
 
+
         
     }
 
@@ -48,12 +50,27 @@ public class GameManager : MonoBehaviour
         //if exist end function
         if(grid != null && gridManager != null) return;
 
+        //Find Object with tag Grid
         grid = GameObject.FindWithTag("Grid");
 
+        //Check grid exist
         if (grid != null && grid.GetComponent<GridManager>()) 
         {
+            //Assign the Manager
             gridManager = grid.GetComponent<GridManager>();
         }
         
+    }
+
+    public void EndTurn()
+    {
+        if (currentTurn == PlayerTurn.Player1)
+        {
+            currentTurn = PlayerTurn.Player2;
+        }
+        else
+        {
+            currentTurn = PlayerTurn.Player1;
+        }
     }
 }
