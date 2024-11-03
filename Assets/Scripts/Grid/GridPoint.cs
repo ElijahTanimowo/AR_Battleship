@@ -10,6 +10,7 @@ public class GridPoint : MonoBehaviour
     public bool isHit;
     [SerializeField] GameObject counterPart;
     GridPoint opp;
+    [SerializeField] GameObject getShipObject;
 
     [Header("Material of Grid Point")]
     [SerializeField] Material hit;
@@ -28,18 +29,13 @@ public class GridPoint : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ship"))
         {
-            Debug.Log("There is a ship");
             hasShip = true;
+            getShipObject = other.gameObject;
+            
         }
     }
 
@@ -51,6 +47,14 @@ public class GridPoint : MonoBehaviour
             {
                 this.meshRender.material = hit;
                 opp.meshRender.material = hit;
+                if (getShipObject != null)
+                {
+                    Ship ship = getShipObject.GetComponentInParent<Ship>();
+                    if (ship)
+                    {
+                        Debug.Log("hello");
+                    }
+                }
             }
             else
             {
