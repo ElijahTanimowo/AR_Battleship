@@ -12,6 +12,7 @@ public class Ship : MonoBehaviour
     [Header("Explosion")]
     public ParticleSystem explosionPrefab;
     [SerializeField] Transform explosionLocation;
+    [SerializeField] GameObject destroyedShip;
 
     public void DamageHull()
     {
@@ -21,7 +22,8 @@ public class Ship : MonoBehaviour
         if(shipDurability <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("Sunk a " + this.name);
+            if(destroyedShip != null)
+                destroyedShip.SetActive(true);
         }
     }
 

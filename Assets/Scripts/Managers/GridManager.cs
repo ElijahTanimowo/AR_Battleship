@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,11 +19,10 @@ public class GridManager : MonoBehaviour
     public GameObject player2TargetGrid;
 
     [Header("Ships")]
-    [SerializeField] Transform player1Ships;
+    [SerializeField] GameObject[] player1Ships;
     public int player1CurrentShips;
-    [SerializeField] Transform player2Ships;
+    [SerializeField] GameObject[] player2Ships;
     public int player2CurrentShips;
-
 
     private void Awake()
     {
@@ -41,14 +41,15 @@ public class GridManager : MonoBehaviour
 
     private void Start()
     {
-        player1CurrentShips = player1Ships.childCount;
-        player2CurrentShips = player2Ships.childCount;
+        player1CurrentShips = player1Ships.Length;
+        player2CurrentShips = player2Ships.Length;
     }
 
     private void Update()
     {
-        player1CurrentShips = player1Ships.childCount;
-        player2CurrentShips = player2Ships.childCount;
+        player1CurrentShips = player1Ships.Length;
+        player2CurrentShips = player2Ships.Length;
+
     }
 
     public void SetMissile()
