@@ -51,14 +51,15 @@ public class GridPoint : MonoBehaviour
             {
                 this.meshRender.material = hit;
                 opp.meshRender.material = hit;
-                this.isHit = true;
-                opp.isHit = true;
             }
             else
             {
                 this.meshRender.material = notHit;
                 opp.meshRender.material = notHit;
             }
+
+            this.isHit = true;
+            opp.isHit = true;
         }
     }
 }
