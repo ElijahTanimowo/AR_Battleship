@@ -30,7 +30,7 @@ public class GridPoint : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Ship"))
         {
@@ -38,7 +38,6 @@ public class GridPoint : MonoBehaviour
             {
                 hasShip = true;
                 testShip = other.gameObject.GetComponent<Ship>();
-                Debug.Log("Ship detected: " + testShip.name);
             }    
         }
     }
@@ -51,7 +50,10 @@ public class GridPoint : MonoBehaviour
             {
                 this.meshRender.material = hit;
                 opp.meshRender.material = hit;
-                Debug.Log("Ship detected: " + testShip.name);
+                if (opp.testShip)
+                {
+                    opp.testShip.DamageHull();
+                }
 
             }
             else

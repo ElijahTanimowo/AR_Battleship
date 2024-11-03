@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1127189551095923383}
   - component: {fileID: -8651693883770787669}
+  - component: {fileID: -138768517001984628}
+  - component: {fileID: 3779471609071636941}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Ship
@@ -50,6 +52,54 @@ MonoBehaviour:
   shipDurability: 3
   explosionPrefab: {fileID: 3219039365368255600, guid: b8f6597faff2e024ea653b0ebc1ca701, type: 3}
   explosionLocation: {fileID: 8115675375154189556}
+--- !u!65 &-138768517001984628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962981469556668685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3137481, y: 0.13123229, z: 0.08217252}
+  m_Center: {x: 0.11840054, y: 0.09258752, z: 0.00015607779}
+--- !u!54 &3779471609071636941
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962981469556668685}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6753803158070460839
 GameObject:
   m_ObjectHideFlags: 0
