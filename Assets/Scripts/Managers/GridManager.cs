@@ -17,6 +17,13 @@ public class GridManager : MonoBehaviour
     [SerializeField] Transform missileLocationP2;
     public GameObject player2TargetGrid;
 
+    [Header("Ships")]
+    [SerializeField] Transform player1Ships;
+    public int player1CurrentShips;
+    [SerializeField] Transform player2Ships;
+    public int player2CurrentShips;
+
+
     private void Awake()
     {
         //Game Manager in world, destory
@@ -28,12 +35,21 @@ public class GridManager : MonoBehaviour
         {
             instance = this;
         }
+
+    }
+
+
+    private void Start()
+    {
+        player1CurrentShips = player1Ships.childCount;
+        player2CurrentShips = player2Ships.childCount;
     }
 
     private void Update()
     {
+        player1CurrentShips = player1Ships.childCount;
+        player2CurrentShips = player2Ships.childCount;
     }
-
 
     public void SetMissile()
     {
