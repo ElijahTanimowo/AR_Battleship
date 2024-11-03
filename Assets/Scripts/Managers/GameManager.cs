@@ -27,19 +27,12 @@ public class GameManager : MonoBehaviour
         currentTurn = PlayerTurn.Player1;
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
         FindGrid();
-
-
-        
     }
 
     /// <summary>
