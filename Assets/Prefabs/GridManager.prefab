@@ -3776,6 +3776,10 @@ MonoBehaviour:
   missileLocationP1: {fileID: 1501025260976568018}
   missileLocationP2: {fileID: 2878805266407152688}
   player2TargetGrid: {fileID: 4246936968014810214}
+  player1Ships: {fileID: 7669050785315667025}
+  player1CurrentShips: 0
+  player2Ships: {fileID: 8380306030550748032}
+  player2CurrentShips: 0
 --- !u!1 &8069018847281450424
 GameObject:
   m_ObjectHideFlags: 0
