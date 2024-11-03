@@ -533,6 +533,7 @@ Transform:
   - {fileID: 4496358973506018058}
   - {fileID: 3046543736836578258}
   - {fileID: 5995405769466174644}
+  - {fileID: 1501025260976568018}
   m_Father: {fileID: 7458414049693642132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233826119525469548
@@ -3652,6 +3653,37 @@ Transform:
   - {fileID: 7335567602340478114}
   m_Father: {fileID: 6663492912095483988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7924970713225179973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2878805266407152688}
+  m_Layer: 0
+  m_Name: MissileLocation 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2878805266407152688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924970713225179973}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5110016, y: 0.208, z: -0.07300019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7458414049693642132}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7936445335687642964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,6 +3716,7 @@ Transform:
   m_Children:
   - {fileID: 4966243795547432830}
   - {fileID: 2700483860630821205}
+  - {fileID: 2878805266407152688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1943034978444377187
@@ -3698,7 +3731,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7c500e7c8942e458938a33de3f2f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missile: {fileID: 4282181553771802011, guid: 593139f21079b604e8cc2b580b6b9d82, type: 3}
+  missileObject1: {fileID: 0}
+  missileObject2: {fileID: 0}
   player1TargetGrid: {fileID: 745516530299372135}
+  missileLocationP1: {fileID: 1501025260976568018}
+  missileLocationP2: {fileID: 2878805266407152688}
   player2TargetGrid: {fileID: 4246936968014810214}
 --- !u!1 &8069018847281450424
 GameObject:
@@ -3807,6 +3845,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8085091199889381202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501025260976568018}
+  m_Layer: 0
+  m_Name: MissileLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1501025260976568018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085091199889381202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.038, y: 0.208, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4966243795547432830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8341143583710289850
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
-        currentTurn = PlayerTurn.Player1;
+        
 
     }
 
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
         {
             //Assign the Manager
             gridManager = grid.GetComponent<GridManager>();
+            currentTurn = PlayerTurn.Player1;
+            gridManager.SetMissile();
         }
         
     }
@@ -58,12 +60,10 @@ public class GameManager : MonoBehaviour
     public void EndTurn()
     {
         if (currentTurn == PlayerTurn.Player1)
-        {
             currentTurn = PlayerTurn.Player2;
-        }
         else
-        {
             currentTurn = PlayerTurn.Player1;
-        }
+  
+        gridManager.SetMissile();
     }
 }

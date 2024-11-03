@@ -56,15 +56,8 @@ public class MissileController : MonoBehaviour
             // set explosion location
             Instantiate(explosionPrefab, target.position, Quaternion.identity);
 
-            // reset missile position and rotation
-            transform.position = startPosition;
-            transform.rotation = Quaternion.identity;
+            Destroy(gameObject);
 
-            // reset target
-            target = null;
-
-            // stop playing smoke trail
-            smokeTrail.Stop();
         }
     }
 

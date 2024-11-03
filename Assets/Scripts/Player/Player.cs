@@ -6,8 +6,8 @@ using UnityEngine.XR.ARSubsystems;
 
 public class Player : MonoBehaviour
 {
-    [Header("Player Info")]
-    public bool canAttack = false;
+    [Header("Missile Info")]
+    public MissileController missileP1;
 
     [Space]
     public GameObject objectToSpawn;
@@ -47,15 +47,18 @@ public class Player : MonoBehaviour
                     {
                         if (GameManager.instance.currentTurn == PlayerTurn.Player1 && selectedGridPoint.layer == LayerMask.NameToLayer("Player1Grid"))
                         {
-                            PlayerManager.instance.CompleteMove();
+                           
+
                             Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
                             CheckForShip(selectedGridPoint);
+                            PlayerManager.instance.CompleteMove();
                         }
                         else if (GameManager.instance.currentTurn == PlayerTurn.Player2 && selectedGridPoint.layer == LayerMask.NameToLayer("Player2Grid"))
                         {
-                            PlayerManager.instance.CompleteMove();
+                            
                             Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
                             CheckForShip(selectedGridPoint);
+                            PlayerManager.instance.CompleteMove();
                         }
                     }
                 }
@@ -122,6 +125,26 @@ public class Player : MonoBehaviour
         if (point != null) 
         {
             point.OnHitGridPoint();
+            ShootMissile(gridPoint);
+           
+        }
+    }
+
+    void ShootMissile(GameObject selectedObject)
+    {
+        if (GameManager.instance.gridManager != null)
+        {
+            if (GameManager.instance.currentTurn == PlayerTurn.Player1)
+            {
+                GridManager.instance.missileObject1.target = selectedObject.transform;
+                Debug.Log("Player 1 shot");
+            }
+            else if (GameManager.instance.currentTurn == PlayerTurn.Player2)
+            {
+                GridManager.instance.missileObject2.target = selectedObject.transform;
+                Debug.Log("Player 2 shot");
+            }
+
         }
     }
 }
