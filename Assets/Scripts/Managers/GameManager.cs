@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GridManager gridManager;
     public PlayerTurn currentTurn;
 
+
     private void Awake()
     {
         //Game Manager in world, destory
@@ -27,12 +28,35 @@ public class GameManager : MonoBehaviour
         
 
     }
+    private void Start()
+    {
+        
+    }
 
 
     // Update is called once per frame
     void Update()
     {
         FindGrid();
+        CheckBattleShipGame();
+    }
+
+    private void CheckBattleShipGame()
+    {
+        //if not exist end function
+        if (grid != null && gridManager != null)
+        {
+            //Check no ships from player 1
+            if (gridManager.player1CurrentShips <= 0)
+            {
+                Debug.Log("Player 2 Won");
+            }
+            //Check no ships from player 2
+            if (gridManager.player2CurrentShips <= 0)
+            {
+                Debug.Log("Player 1 Won");
+            }
+        }
     }
 
     /// <summary>
