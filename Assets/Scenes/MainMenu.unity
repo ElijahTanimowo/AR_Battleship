@@ -360,6 +360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2b4c824c657704f9d78e9af20c7248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayWinnerText: {fileID: 1075675595}
+  displayObject: {fileID: 1075675593}
+  displayCanvas: {fileID: 0}
   title: {fileID: 0}
   player1Won: 0
   player2Won: 0
@@ -745,7 +748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1075675594
 RectTransform:
   m_ObjectHideFlags: 0
@@ -876,7 +879,6 @@ GameObject:
   - component: {fileID: 1418775026}
   - component: {fileID: 1418775025}
   - component: {fileID: 1418775024}
-  - component: {fileID: 1418775028}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -969,20 +971,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1418775028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418775023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89fbaad38be9384891f5b6fb38bd22e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayWinnerText: {fileID: 1075675595}
-  displayObject: {fileID: 1075675593}
 --- !u!1 &1621810483
 GameObject:
   m_ObjectHideFlags: 0

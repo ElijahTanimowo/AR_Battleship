@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DisplayWinner : MonoBehaviour
 {
-
     [SerializeField] TextMeshProUGUI displayWinnerText;
     [SerializeField] GameObject displayObject;
 
