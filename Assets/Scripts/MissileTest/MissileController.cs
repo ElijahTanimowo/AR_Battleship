@@ -54,9 +54,10 @@ public class MissileController : MonoBehaviour
         if (target != null && other.transform == target)
         {
             // set explosion location
-            Instantiate(explosionPrefab, target.position, Quaternion.identity);
+            ParticleSystem explosion = Instantiate(explosionPrefab, target.position, Quaternion.identity);
 
-            Destroy(gameObject);
+            Destroy(this.gameObject, 2);
+            Destroy(explosion.gameObject, 3);
 
         }
     }

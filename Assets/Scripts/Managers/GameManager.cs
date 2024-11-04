@@ -30,7 +30,11 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.player2Won = false;
+            UIManager.Instance.player1Won = false;
+        }
     }
 
 
@@ -50,11 +54,20 @@ public class GameManager : MonoBehaviour
             if (gridManager.player1CurrentShips <= 0)
             {
                 Debug.Log("Player 2 Won");
+                if (UIManager.Instance != null) 
+                {
+                    UIManager.Instance.player2Won = true;
+                    UIManager.Instance.OnSceneChange("WinLoseScreen");
+                }
             }
             //Check no ships from player 2
             if (gridManager.player2CurrentShips <= 0)
             {
-                Debug.Log("Player 1 Won");
+                if (UIManager.Instance != null)
+                {
+                    UIManager.Instance.player1Won = true;
+                    UIManager.Instance.OnSceneChange("WinLoseScreen");
+                }
             }
         }
     }

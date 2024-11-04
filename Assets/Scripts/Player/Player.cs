@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
     private void CheckGridPoint(GameObject selectedGridPoint)
     {
         
-        Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
+        //Debug.Log("Selected Grid Point: " + selectedGridPoint.name);
         CheckForShip(selectedGridPoint);
     }
 
@@ -134,12 +134,12 @@ public class Player : MonoBehaviour
             if (GameManager.instance.currentTurn == PlayerTurn.Player1)
             {
                 GridManager.instance.missileObject1.target = selectedObject.transform;
-                Debug.Log("Player 1 shot");
+                //Debug.Log("Player 1 shot");
             }
             else if (GameManager.instance.currentTurn == PlayerTurn.Player2)
             {
                 GridManager.instance.missileObject2.target = selectedObject.transform;
-                Debug.Log("Player 2 shot");
+                //Debug.Log("Player 2 shot");
             }
 
         }

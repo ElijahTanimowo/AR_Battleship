@@ -19,9 +19,9 @@ public class GridManager : MonoBehaviour
     public GameObject player2TargetGrid;
 
     [Header("Ships")]
-    [SerializeField] GameObject[] player1Ships;
+    [SerializeField] Transform player1Ships;
     public int player1CurrentShips;
-    [SerializeField] GameObject[] player2Ships;
+    [SerializeField] Transform player2Ships;
     public int player2CurrentShips;
 
     private void Awake()
@@ -35,20 +35,15 @@ public class GridManager : MonoBehaviour
         {
             instance = this;
         }
+        player1CurrentShips = player1Ships.childCount;
+        player2CurrentShips = player2Ships.childCount;
 
-    }
-
-
-    private void Start()
-    {
-        player1CurrentShips = player1Ships.Length;
-        player2CurrentShips = player2Ships.Length;
     }
 
     private void Update()
     {
-        player1CurrentShips = player1Ships.Length;
-        player2CurrentShips = player2Ships.Length;
+        player1CurrentShips = player1Ships.childCount;
+        player2CurrentShips = player2Ships.childCount;
 
     }
 
